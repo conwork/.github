@@ -46,25 +46,42 @@ class ConworkEngineer {
 }
 ```
 
-### 🛠️ Tech Stack & Herramientas
-Utilizamos lo mejor de la tecnología moderna para construir productos duraderos.
+### 🛠️ Nuestro Stack Tecnológico
 
-Core & Backend
+Elegimos las herramientas más robustas y modernas para construir soluciones web escalables.
 
-Frontend & Mobile
+**Core & Backend**
+<div align="left">
+  <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=flat-square&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=flat-square&logo=laravel&logoColor=white" alt="Laravel" />
+  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+</div>
 
-Infra & DevOps
+**Frontend & Diseño**
+
+<div align="left">
+  <img src="https://img.shields.io/badge/vue.js-%2335495e.svg?style=flat-square&logo=vuedotjs&logoColor=%234FC08D" alt="Vue.js" />
+  <img src="https://img.shields.io/badge/tailwindcss-%2306B6D4.svg?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+</div>
+
+**Bases de Datos & Servicios**
+
+<div align="left">
+  <img src="https://img.shields.io/badge/mysql-%234479A1.svg?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white" alt="MariaDB" />
+  <img src="https://img.shields.io/badge/postgresql-%23336791.svg?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" alt="Firebase" />
+  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/git-%23F05033.svg?style=flat-square&logo=git&logoColor=white" alt="Git" />
+</div>
 
 ### 📈 Actividad de la Organización
-Un vistazo en tiempo real a la energía que fluye por nuestros repositorios.
 
-<div align="center">
-
-<a href="https://github.com/conwork"> <img align="center" src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3Dconwork%26show_icons%3Dtrue%26theme%3Dtokyonight%26hide_border%3Dtrue%26count_private%3Dtrue%26include_all_commits%3Dtrue" alt="Conwork's GitHub Stats" /> </a>
-
-
-<a href="https://github.com/conwork"> <img align="center" src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api/top-langs/%3Fusername%3Dconwork%26layout%3Dcompact%26theme%3Dtokyonight%26hide_border%3Dtrue%26langs_count%3D8" alt="Top Languages" /> </a>
-
-</div>
+<p align="center">
+  <a href="https://conwork.io">
+    <img src="https://img.shields.io/badge/Ver_todos_los_proyectos_en-conwork.io-blue?style=for-the-badge" alt="Web">
+  </a>
+</p>
 
 <p align="center"> <small>🚀 <i>Powered by coffee, passion, and the open-source community.</i></small> </p>

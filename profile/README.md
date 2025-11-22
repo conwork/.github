@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://conwork.io/assets/img/conwork.gif" alt="Conwork" width="100%" style="border-radius: 10px;"/>
+  <img src="https://conwork.io/assets/img/conwork.gif" alt="Conwork" style="border-radius: 10px;"/>
 </div>
 
 <h1 align="center">👋 Bienvenido al núcleo tecnológico de Conwork</h1>

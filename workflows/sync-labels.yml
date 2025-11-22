@@ -1,0 +1,61 @@
+name: Sync Labels Organization-Wide
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/labels.yml'
+  workflow_dispatch: # Para lanzar manual cuando quieras
+
+jobs:
+  # TRABAJO 1: Obtener la lista de repositorios
+  get-repos:
+    runs-on: ubuntu-latest
+    outputs:
+      repos: ${{ steps.set-matrix.outputs.repos }}
+    env:
+      GH_TOKEN: ${{ secrets.ORG_ADMIN_TOKEN }} # Tu token maestro
+    steps:
+      - name: Get Repositories
+        id: set-matrix
+        # Usamos la CLI de GitHub para listar todos los repos de la org (excluyendo archivados)
+        run: |
+          REPOS=$(gh repo list ${{ github.repository_owner }} --no-archived --source --limit 1000 --json name --jq '[.[].name]')
+          echo "repos=$REPOS" >> $GITHUB_OUTPUT
+
+  # TRABAJO 2: Aplicar etiquetas a cada repositorio encontrado
+  sync-labels:
+    needs: get-repos
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # Si falla en un repo, que siga con los demás
+      matrix:
+        repo: ${{ fromJson(needs.get-repos.outputs.repos) }}
+    
+    steps:
+      # 1. Hacemos checkout del repositorio DESTINO
+      - name: Checkout Target Repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/${{ matrix.repo }}
+          token: ${{ secrets.ORG_ADMIN_TOKEN }}
+
+      # 2. Descargamos el archivo de etiquetas del repositorio CENTRAL (.github)
+      #    (Truco: lo descargamos al vuelo para no tener que hacer dos checkouts)
+      - name: Download Labels Config
+        run: |
+          curl -H "Authorization: token ${{ secrets.ORG_ADMIN_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3.raw" \
+          -o labels_config.yml \
+          "https://api.github.com/repos/${{ github.repository_owner }}/.github/contents/.github/labels.yml"
+
+      # 3. Aplicamos las etiquetas
+      - name: Sync Labels
+        uses: crazy-max/ghaction-github-labeler@v5
+        with:
+          yaml_file: labels_config.yml
+          prune: false # Cambia a 'true' si quieres borrar las etiquetas viejas que no estén en tu lista
+          skip_verify: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.ORG_ADMIN_TOKEN }}

@@ -1,0 +1,65 @@
+# Archivo: .github/labels.yml
+
+# --- NIVELES DE DIFICULTAD (RPG) ---
+- name: "🍼 Nivel 1: Tutorial"
+  color: "586875" # Gris azulado (Tono "acero básico")
+  description: "Mamá no puede ayudarte a compilar esto, pero casi."
+
+- name: "🛡️ Nivel 2: Escudero"
+  color: "e4e669" # Amarillo mostaza (Tono "paja/oro viejo")
+  description: "Tú sujetas la linterna, los mayores arreglan el bug."
+
+- name: "⚔️ Nivel 3: Desafío"
+  color: "d93f0b" # Naranja rojizo (Tono "alerta")
+  description: "Aquí empieza la diversión. Afila tu lógica."
+
+- name: ":octocat: Nivel 4: Pesadilla"
+  color: "300a24" # Morado casi negro (Tono "villano")
+  description: "¿Miedo? Eso no está en la documentación."
+
+# --- PRIORIDADES ---
+- name: "! ! !"
+  color: "b60205" # Rojo intenso
+  description: "Prioridad alta"
+
+- name: "blocker 🚧"
+  color: "1d1e21" # Negro/Gris muy oscuro
+  description: "Máxima prioridad, hay que resolverla cuanto antes"
+
+- name: "nice to have ⭐"
+  color: "1f7a4e" # Verde bosque suave
+  description: "Prescindible, sin prioridad. Es un extra que estaría bien desarrollar"
+
+# --- TIPOS DE TAREA ---
+- name: "bug 🐞"
+  color: "d73a4a" # Rojo bug estándar
+  description: "Incidencia"
+
+- name: "enhancement 🛠️"
+  color: "84b6eb" # Azul cielo
+  description: "Nueva implementación"
+
+- name: "documentation 📝"
+  color: "0075ca" # Azul corporativo
+  description: "Se necesita documentación"
+
+- name: "design 🎨"
+  color: "f2bf8f" # Tono piel/beige
+  description: "Diseño"
+
+- name: "next version ⏭️"
+  color: "6f8f75" # Verde grisáceo
+  description: "A desarrollar en próxima versión"
+
+# --- COMUNICACIÓN / REVISIÓN ---
+- name: "question customer ❓"
+  color: "d876e3" # Rosa/Lila
+  description: "Dudas a resolver con cliente"
+
+- name: "question ❔"
+  color: "cc317c" # Magenta oscuro
+  description: "Dudas a resolver internamente"
+
+- name: "review 🔍"
+  color: "a88364" # Marrón claro
+  description: "Necesario revisar"
